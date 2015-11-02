@@ -1,0 +1,12 @@
+
+{{#each model as |product|}}
+<ul>
+    <li>{{product.name}}</li>
+    <li>{{product.user.firstName}}</li>
+    <li><img src="{{product.thumbnailUrl}}"></li>
+    <li>{{product.filename}}</li>
+    <li>{{product.contentType}}</li>
+    <li>{{product.fabOfWeekWinner}}</li>
+</ul>
+
+{{/each}}
