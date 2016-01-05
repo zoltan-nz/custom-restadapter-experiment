@@ -2,6 +2,9 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
 
+  parentProduct: DS.belongsTo('product', {inverse: 'childProducts'),
+  childProducts: DS.hasMany('product', {inverse: 'parentProduct'})
+
   user:             DS.belongsTo('user', {async: true}),
 
   name:             DS.attr('string'),

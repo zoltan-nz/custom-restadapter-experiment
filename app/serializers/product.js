@@ -3,6 +3,7 @@ import ApplicationSerializer from './application';
 export default ApplicationSerializer.extend({
 
   normalize(typeClass, hash) {
+    debugger;
     return {
       data: {
         type:          'product',
@@ -36,6 +37,8 @@ export default ApplicationSerializer.extend({
       products: results,
       users: users
     };
+
+    debugger;
 
     return this._super(store, primaryModelClass, newPayload, id, requestType);
   }

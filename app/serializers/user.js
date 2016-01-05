@@ -3,6 +3,7 @@ import DS from 'ember-data';
 export default DS.RESTSerializer.extend({
 
   normalize(typeClass, hash) {
+    debugger;
     return {
       data: {
         type:       'user',
@@ -12,5 +13,9 @@ export default DS.RESTSerializer.extend({
         }
       }
     };
+  },
+
+  normalizePayload(store, primaryModelClass, payload, id, requestType) {
+    debugger;
   }
 });
